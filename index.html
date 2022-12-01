@@ -30,9 +30,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#Vehículos">Vehículos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#listadoVehículos">Consulta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Búsqueda">Búsqueda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Envios">Envios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#listadoEnvios">Consulta</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                 </ul>
             </div>
@@ -42,145 +41,163 @@
     <header class="masthead">
         <div class="container">
             <div class="masthead-heading text-uppercase">Bienvenidos!</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#Vehículos">Comencemos</a>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#Envios">Comencemos</a>
         </div>
     </header>
-    <!-- Vehículos-->
-    <section class="page-section bg-light" id="Vehículos">
+    <!-- Envios-->
+    <section class="page-section bg-light" id="Envios">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Vehículos</h2>
-                <h3 class="section-subheading text-muted">Ingresa un nuevo vehículo</h3>
+                <h2 class="section-heading text-uppercase">Nuevo envio</h2>
+                <h3 class="section-subheading text-muted">¡Envía un nuevo paquete!</h3>
             </div>
 
             <form id="formNewCar" class="form-control">
-                <p class="section-subheading text-muted">Datos personales:</p><br>
+                <br>
+                <p class="section-subheading text-body col-sm-3">
+                    <strong>Datos personales:</strong>
+                </p>
+                <br>
+                
                 <div class="form-group row">
-                    <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" placeholder="Camila Garcia" required="required">
+                    <label for="inputName" class="col-sm-3 col-form-label">Nombre completo:</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputName" placeholder="Camila Ramirez Garcia" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com" required="required">
-                  </div>
+                    <label for="inputEmail" class="col-sm-3 col-form-label">Dimensiones del paquete:</label>
+                        <label for="inputEmail" class="col-sm-1 col-form-label">Ancho:</label>
+                        <div class="col-3">
+                            <input type="text" class="form-control" placeholder="50cm">
+                        </div>
+                        <label for="inputEmail" class="col-sm-1 col-form-label">Largo:</label>
+                        <div class="col-3">
+                            <input type="text" class="form-control" placeholder="50cm">
+                        </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputTel" class="col-sm-2 col-form-label">Teléfono</label>
-                    <div class="col-sm-10">
-                      <input type="tel" class="form-control" id="inputTel" placeholder="3023957438" required="required">
+                    <label for="inputTel" class="col-sm-3 col-form-label">Peso aproximado:</label>
+                    <div class="col-sm-8">
+                      <input type="tel" class="form-control" id="inputTel" placeholder="5kg" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                  <label for="inputCountry" class="col-sm-2 col-form-label">País</label>
-                  <div class="col-sm-10">
-                    <select class="form-control" required="required" id="inputCountry">
-                        <option selected class="form-option-selected">Pais...</option>
-                        <option>Argentina</option>
-                        <option>Colombia</option>
-                        <option>Chile</option>
-                        <option>Brasil</option>
-                        <option>Mexico</option>
-                    </select>
-                  </div>
+                    <label for="inputEmail" class="col-sm-3 col-form-label">Delicado:</label>
+                        <label for="inputEmail" class="col-sm-1 col-form-label">Si:</label>
+                        <div class="col-3 form-check">
+                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                        </div>
+                        <label for="inputEmail" class="col-sm-1 col-form-label">No:</label>
+                        <div class="col-3 form-check">
+                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                        </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputPlaca" class="col-sm-2 col-form-label">Placa</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputPlaca" placeholder="WJS234" required="required">
+                    <label for="inputMarca" class="col-sm-3 col-form-label">Ciudad:</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputMarca" placeholder="Bogotá" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputMarca" class="col-sm-2 col-form-label">Marca</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputMarca" placeholder="Hyundai" required="required">
+                    <label for="inputPrice" class="col-sm-3 col-form-label">Dirección a recoger el paquete:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputMarca" placeholder="" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputPrice" class="col-sm-2 col-form-label">Precio</label>
-                    <div class="col-sm-10">
-                      <input type="number" class="form-control" id="inputPrice" placeholder="1000000" required="required">
+                    <label for="inputPrice" class="col-sm-3 col-form-label">Numero de indentificación:</label>
+                    <div class="col-sm-8">
+                      <input type="number" class="form-control" id="inputPrice" placeholder="" required="required">
                     </div>
                 </div>
 
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-3 col-form-label">Ingresa tu horario de disponibilidad:</label>
+                    <div class="col-sm-8">
+                      <input type="date" class="form-control" id="inputPrice" placeholder="" required="required">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputPrice" class="col-sm-3 col-form-label"></label>
+                    <label for="inputEmail" class="col-sm-1 col-form-label">Desde:</label>
+                    <div class="col-3 form-check">
+                        <input type="time" class="form-control" id="inputPrice" placeholder="" required="required">                        
+                    </div>
+                    <label for="inputEmail" class="col-sm-1 col-form-label">Hasta:</label>
+                    <div class="col-3 form-check">
+                        <input type="time" class="form-control" id="inputPrice" placeholder="" required="required">                       
+                    </div>
+                </div>
                 
 
+                <br><br><br>
+
+                <br>
+                <p class="section-subheading text-body col-sm-3">
+                    <strong>Datos de la persona a recibir:</strong>
+                </p>
                 <br><br>
-                    <p class="section-subheading text-muted">Tipo de vehículo:</p><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="carType" id="inlineRadio1" value="Ligero">
-                        <label class="form-check-label" for="inlineRadio1">Ligero</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="carType" id="inlineRadio2" value="Pesado">
-                        <label class="form-check-label" for="inlineRadio2">Pesado</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="carType" id="inlineRadio3" value="Especial">
-                        <label class="form-check-label" for="inlineRadio2">Especial</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="carType" id="inlineRadio4" value="Agrícola">
-                        <label class="form-check-label" for="inlineRadio2">Agrícola</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="carType" id="inlineRadio5" value="Otro">
-                        <div class="form-group row">
-                            <label for="inputOther" class="col-sm-2 col-form-label">Otro</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputOther">
-                            </div>
-                        </div>
-                    </div>
-
-
-                <br><br>
-                    <p class="section-subheading text-muted">Características:</p><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="characteristics" id="inlineRadio11" value="Nuevo">
-                        <label class="form-check-label" for="inlineRadio1">Nuevo</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="characteristics" id="inlineRadio22" value="Usado">
-                        <label class="form-check-label" for="inlineRadio2">Usado</label>
-                    </div>
-
-
-                <br><br><br><br>
+                
                 <div class="form-group row">
-                  <div class="col-sm-10">
+                    <label for="inputName" class="col-sm-3 col-form-label">Nombre completo:</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputName" placeholder="Camila Ramirez Garcia" required="required">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputMarca" class="col-sm-3 col-form-label">Ciudad:</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputMarca" placeholder="Bogotá" required="required">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputPrice" class="col-sm-3 col-form-label">Dirección a recoger el paquete:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputMarca" placeholder="" required="required">
+                    </div>
+                </div>
+                
+                <br><br><br>
+                <div class="form-group row">
+                  <div class="col-sm-3">
                     <button id="buttonNewCar" type="submit" class="btn btn-primary">Enviar</button>
                   </div>
                 </div>
+                <br>
             </form>
             <br><br><br><br>
-        </section>
+    </section>
 
 
+    <!-- listadoEnvios-->
 
  
-    <section class="page-section" id="listadoVehículos">
+    <section class="page-section" id="listadoEnvios">
             
             <div class="text-center">
-                <h3 class="section-subheading text-muted">Consulta tus vehículos</h3>
+                <h2 class="section-subheading text-muted">Consulta tus envios</h2>
             </div>
+            <br><br><br><br>
 
             <table class="table table-striped" >
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Placa</th>
-                    <th scope="col">Información</th>
-                    <th scope="col">Eliminar</th>
-                    <th scope="col">Editar</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Ciudad Entrega</th>
+                    <th scope="col">Dirección Entrega</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Actualizar</th>
                   </tr>
                 </thead>
                 <tbody id="consultTable">
@@ -313,32 +330,8 @@
     </section>
 
    
-
-    <!-- Búsqueda Grid-->
-    <section class="page-section bg-light" id="Búsqueda">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Búsqueda</h2>
-            </div><br><br> 
-            
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-dark active">
-                  <input type="radio" name="options" id="Internacional" autocomplete="off" checked onclick="filterCountry(this.id)"> Internacional
-                </label>
-                <label class="btn btn-dark">
-                  <input type="radio" name="options" id="Nacional" autocomplete="off" onclick="filterCountry(this.id)"> Nacional
-                </label>
-            </div><br><br> 
-
-
-            <div id="cardSearch" class="row row-cols-1 row-cols-md-3 g-4">
-                <!--js code-->
-            </div>
-
-        </div>
-    </section>
     <!-- Team-->
-    <section class="page-section" id="team">
+    <section class="page-section bg-light" id="team">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Nuestro equipo</h2>
@@ -347,30 +340,19 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <h4>Alejandro Gutierrez</h4>
+                        <h4>Erich Hernández Motta</h4>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <h4>Dayan Ibarra</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <h4>Yhosef Mayorga</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <h4>Diego Joya</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <h4>Laura Morales</h4>
-                        <p class="text-muted">Desarrollador principal de Frontend</p>
+                        <h4>Jacqueline Parada Parada</h4>
                         <a class="btn btn-primary btn-social mx-2" href="https://github.com/Laura77-code/GestionDeVehiculos" aria-label="Laura Morales Instagram Profile"><i
-                                class="fab  fa-github"></i></a>
+                            class="fab  fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <h4>Giovany Caraballo Martínez</h4>
                     </div>
                 </div>
             </div>
@@ -379,7 +361,7 @@
     <!-- Footer-->
     <footer class="footer py-4 page-section bg-light">
         <div class="container text-center">
-                <p>Copyright &copy; Gestión de Vehículos Mintic 2022</p>
+                <p>Copyright &copy; InstaYa Mintic 2022</p>
                 <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
                 <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
             </div>
@@ -395,7 +377,7 @@
     <script src="js/scripts.js"></script>
     <script src="js/deleteVehiculos.js"></script>
     <script src="js/formularioCreacionVehiculo.js"></script>
-    <script src="js/listadoVehículos.js"></script>
+    <script src="js/listadoEnvios.js"></script>
     <script src="js/formularioEditarVehiculo.js"></script>
     <script src="js/cardsBusqueda.js"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->

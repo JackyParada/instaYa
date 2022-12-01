@@ -323,7 +323,6 @@ optgroup,
 textarea {
   font-family: inherit;
   font-size: inherit;
-  margin-bottom: 6px;
 }
 
 button,
@@ -652,8 +651,7 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -923,6 +921,7 @@ progress {
   .col-sm-3 {
     flex: 0 0 auto;
     width: 25%;
+    margin-left: 2%;
   }
 
   .col-sm-4 {
@@ -7803,6 +7802,13 @@ textarea.form-control-lg {
 
 .text-opacity-100 {
   --bs-text-opacity: 1;
+  margin-top: 3%;
+  font-size: 1.1rem;
+}
+
+.text-form {
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
 }
 
 .bg-primary {
@@ -11409,7 +11415,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header.jpg");
+  background-image: url("../assets/img/header.webp");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
