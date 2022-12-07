@@ -57,7 +57,10 @@ logout.addEventListener('click', (e) => {
 function introPage() {
     //location.replace("http://127.0.0.1:5500/login.html")
     //console.log("funciona ../login.html")
-    window.location.href="../login.html";
+    //Prod
+    window.location.href="../instaYa/login.html";
+    //Local
+    //window.location.href="../login.html";
 }
 
 auth.onAuthStateChanged(user => {

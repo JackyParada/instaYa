@@ -131,7 +131,10 @@ signinForm.addEventListener('submit', (e) => {
 function indexPage() {
     //location.replace("index.html")
     //console.log("funciona ../index.html")
-    window.location.href="../index.html";
+    //Prod
+    window.location.href="../instaYa/index.html";
+    //Local
+    //window.location.href="../index.html";
 }
 
 auth.onAuthStateChanged(user => {
