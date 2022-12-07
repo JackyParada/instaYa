@@ -129,8 +129,7 @@ signinForm.addEventListener('submit', (e) => {
 //page Change
 
 function indexPage() {
-    window.location.pathname = 'https://jackyparada.github.io/instaYa/index.html';
-    //location.replace("https://jackyparada.github.io/instaYa/index.html")
+    location.replace("http://127.0.0.1:5500/index.html")
 }
 
 auth.onAuthStateChanged(user => {
