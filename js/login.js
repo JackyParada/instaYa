@@ -114,6 +114,7 @@ signinForm.addEventListener('submit', (e) => {
         // ...
     })
     .catch((error) => {
+        alert("Verifica tu usuario o contraseña");
         //const errorCode = error.code;
         //const errorMessage = error.message;
         // ..
@@ -128,7 +129,8 @@ signinForm.addEventListener('submit', (e) => {
 //page Change
 
 function indexPage() {
-    location.replace("https://jackyparada.github.io/instaYa/index.html")
+    window.location.pathname = 'https://jackyparada.github.io/instaYa/index.html';
+    //location.replace("https://jackyparada.github.io/instaYa/index.html")
 }
 
 auth.onAuthStateChanged(user => {

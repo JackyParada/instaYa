@@ -55,7 +55,9 @@ logout.addEventListener('click', (e) => {
 //page Change
 
 function introPage() {
-    location.replace("https://jackyparada.github.io/instaYa/login.html")
+    
+    window.location.pathname = 'https://jackyparada.github.io/instaYa/login.html';
+    //location.replace("https://jackyparada.github.io/instaYa/login.html")
 }
 
 auth.onAuthStateChanged(user => {
