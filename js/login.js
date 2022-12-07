@@ -114,6 +114,7 @@ signinForm.addEventListener('submit', (e) => {
         // ...
     })
     .catch((error) => {
+        alert("Verifica tu usuario o contraseña");
         //const errorCode = error.code;
         //const errorMessage = error.message;
         // ..
@@ -128,7 +129,9 @@ signinForm.addEventListener('submit', (e) => {
 //page Change
 
 function indexPage() {
-    location.replace("http://127.0.0.1:5500/index.html")
+    //location.replace("index.html")
+    //console.log("funciona ../index.html")
+    window.location.href="../index.html";
 }
 
 auth.onAuthStateChanged(user => {

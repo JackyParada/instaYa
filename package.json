@@ -1,0 +1,20 @@
+{
+  "name": "instaya",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackyParada/instaYa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JackyParada/instaYa/issues"
+  },
+  "homepage": "https://github.com/JackyParada/instaYa#readme"
+}
