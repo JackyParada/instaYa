@@ -55,7 +55,9 @@ logout.addEventListener('click', (e) => {
 //page Change
 
 function introPage() {
-    location.replace("http://127.0.0.1:5500/login.html")
+    //location.replace("http://127.0.0.1:5500/login.html")
+    //console.log("funciona ../login.html")
+    window.location.href="../login.html";
 }
 
 auth.onAuthStateChanged(user => {
