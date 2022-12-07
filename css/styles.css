@@ -460,6 +460,25 @@ progress {
   display: none !important;
 }
 
+.gradient-custom-3 {
+  height: 100%;
+  width: 100%;
+  /* fallback for old browsers */
+  --dark-gray: #353535;
+  --gray: #5B5B5B;
+  --light-gray: #D9D9D9;
+  --bs-primary: #ffc800;
+
+  background: var(--bs-primary);
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, var(--dark-gray), var(--gray));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, var(--dark-gray), var(--gray))
+  
+}
+
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
@@ -551,6 +570,16 @@ progress {
 .initialism {
   font-size: 0.875em;
   text-transform: uppercase;
+}
+
+.bg-container {
+  margin:0;
+  height:100%;
+  overflow:hidden;
+  background-image: url("../assets/img/header.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
 }
 
 .blockquote {
@@ -4543,6 +4572,10 @@ textarea.form-control-lg {
   justify-content: space-evenly;
 }
 
+.card-body-main {
+  flex: 1;
+}
+
 .card-title {
   margin-bottom: 0.5rem;
 }
@@ -5995,7 +6028,7 @@ textarea.form-control-lg {
 .carousel-inner {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: scroll;
 }
 .carousel-inner::after {
   display: block;
@@ -11323,7 +11356,7 @@ p {
 
 @media (min-width: 768px) {
   section {
-    padding: 9rem 0;
+    padding: 5rem 0;
   }
 }
 .btn-xl {
@@ -11410,16 +11443,19 @@ p {
     margin-right: 0;
   }
 }
+
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header.webp");
+  background-image: url("../assets/img/header.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  min-height: 100%;
+  width: 100%;
 }
 header.masthead .masthead-heading {
   font-size: 3.25rem;

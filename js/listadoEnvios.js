@@ -1,13 +1,13 @@
 window.addEventListener('load', async function() {
     //console.log('La página ha terminado de cargarse!!');
     listAllCar()
-    console.log("init allcar")
+    //console.log("init allcar")
 });
 
 async function listAllCar(){
     //console.log('La página ha terminado de cargarse!!');
     let cars = await allCar();
-    console.log('Car:', cars);
+    //console.log('Car:', cars);
     tableRows(cars);
 }
 
@@ -18,9 +18,8 @@ function clearList(){
 }
 
 async function allCar() {
-    console.log("all car");
     //log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
-    var url = 'https://633e4bc00dbc3309f3b374d2.mockapi.io/api/v1/vehiculos';
+    var url = 'https://6388214aa4bb27a7f77e669a.mockapi.io/users';
     const respuesta = await fetch(url, {
     method: 'GET', // or 'PUT',
     headers:{
@@ -48,15 +47,18 @@ function tableRows(cars){
         newCell.style.fontWeight = 'bold';
 
         newCell = newConsultRow.insertCell(1);
-        newCell.textContent = car["placa"];
+        newCell.textContent = car["horarioDisponibilidadFecha"];
 
         newCell = newConsultRow.insertCell(2);
-        newCell.textContent = car["pais"] + ", " + car["marca"] + ", $" + car["precio"] + ", " + car["tipoVehiculo"] + ", " + car["caracteristicas"];
+        newCell.textContent = car["ciudadRecipiente"];
 
         newCell = newConsultRow.insertCell(3);
-        newCell.innerHTML = `<button class='deleteButton btn-secondary bi bi-trash3' onClick='deleteVehiculo(${car["id"]})'><img src='./assets/img/trash.svg'></button>`;
+        newCell.textContent = car["direccionRecipiente"];
 
         newCell = newConsultRow.insertCell(4);
+        newCell.innerHTML = `<button class='deleteButton btn-secondary bi bi-trash3' onClick='deleteVehiculo(${car["id"]})'><img src='./assets/img/trash.svg'></button>`;
+
+        newCell = newConsultRow.insertCell(5);
         newCell.innerHTML = "<button name='editButton' onClick='edit_vehiculo_from(this.id)' id='"+ car["id"] +"' type='button' class='btn btn-secondary' data-bs-toggle='modal' data-bs-target='#exampleModal'><img src='./assets/img/pencil.svg'></button>";
         
     }

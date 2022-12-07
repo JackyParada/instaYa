@@ -33,6 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="#Envios">Envios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#listadoEnvios">Consulta</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="logout">Cerrar cesion</a></li>
                 </ul>
             </div>
         </div>
@@ -40,8 +41,8 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container">
-            <div class="masthead-heading text-uppercase">Bienvenidos!</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#Envios">Comencemos</a>
+            <div class="masthead-heading text-uppercase">Insta Ya</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#Envios">Nuevo paquete</a>
         </div>
     </header>
     <!-- Envios-->
@@ -67,61 +68,61 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-3 col-form-label">Dimensiones del paquete:</label>
+                    <label for="dimension" class="col-sm-3 col-form-label">Dimensiones del paquete:</label>
                         <label for="inputEmail" class="col-sm-1 col-form-label">Ancho:</label>
                         <div class="col-3">
-                            <input type="text" class="form-control" placeholder="50cm">
+                            <input id="inputDimensionAncho" type="text" class="form-control" placeholder="50cm">
                         </div>
                         <label for="inputEmail" class="col-sm-1 col-form-label">Largo:</label>
                         <div class="col-3">
-                            <input type="text" class="form-control" placeholder="50cm">
+                            <input id="inputDimensionLargo" type="text" class="form-control" placeholder="50cm">
                         </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputTel" class="col-sm-3 col-form-label">Peso aproximado:</label>
+                    <label for="peso" class="col-sm-3 col-form-label">Peso aproximado:</label>
                     <div class="col-sm-8">
-                      <input type="tel" class="form-control" id="inputTel" placeholder="5kg" required="required">
+                      <input type="tel" class="form-control" id="inputPeso" placeholder="5kg" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-3 col-form-label">Delicado:</label>
+                    <label id="delicado" for="inputEmail" class="col-sm-3 col-form-label">Delicado:</label>
                         <label for="inputEmail" class="col-sm-1 col-form-label">Si:</label>
                         <div class="col-3 form-check">
-                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                            <input class="form-check-input position-static" type="radio" name="delicado" id="blankRadio1" value="si" aria-label="...">
                         </div>
                         <label for="inputEmail" class="col-sm-1 col-form-label">No:</label>
                         <div class="col-3 form-check">
-                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                            <input class="form-check-input position-static" type="radio" name="delicado" id="blankRadio2" value="no" aria-label="...">
                         </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputMarca" class="col-sm-3 col-form-label">Ciudad:</label>
+                    <label for="inputCiudad" class="col-sm-3 col-form-label">Ciudad:</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputMarca" placeholder="Bogotá" required="required">
+                      <input type="text" class="form-control" id="inputCiudad" placeholder="Bogotá" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputPrice" class="col-sm-3 col-form-label">Dirección a recoger el paquete:</label>
+                    <label for="inputDireccionRecogida" class="col-sm-3 col-form-label">Dirección a recoger el paquete:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="inputMarca" placeholder="" required="required">
+                        <input type="text" class="form-control" id="inputDireccionRecogida" placeholder="" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputPrice" class="col-sm-3 col-form-label">Numero de indentificación:</label>
+                    <label for="inputIdentificacion" class="col-sm-3 col-form-label">Numero de indentificación:</label>
                     <div class="col-sm-8">
-                      <input type="number" class="form-control" id="inputPrice" placeholder="" required="required">
+                      <input type="number" class="form-control" id="inputIdentificacion" placeholder="" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-3 col-form-label">Ingresa tu horario de disponibilidad:</label>
+                    <label for="inputHorarioDisponibilidad" class="col-sm-3 col-form-label">Ingresa tu horario de disponibilidad:</label>
                     <div class="col-sm-8">
-                      <input type="date" class="form-control" id="inputPrice" placeholder="" required="required">
+                      <input type="date" class="form-control" id="inputHorarioDisponibilidad" placeholder="" required="required">
                     </div>
                 </div>
 
@@ -129,11 +130,11 @@
                     <label for="inputPrice" class="col-sm-3 col-form-label"></label>
                     <label for="inputEmail" class="col-sm-1 col-form-label">Desde:</label>
                     <div class="col-3 form-check">
-                        <input type="time" class="form-control" id="inputPrice" placeholder="" required="required">                        
+                        <input  type="time" class="form-control" id="inputHorarioDisponibilidadHora1" placeholder="" required="required">                        
                     </div>
                     <label for="inputEmail" class="col-sm-1 col-form-label">Hasta:</label>
                     <div class="col-3 form-check">
-                        <input type="time" class="form-control" id="inputPrice" placeholder="" required="required">                       
+                        <input type="time" class="form-control" id="inputHorarioDisponibilidadHora2" placeholder="" required="required">                       
                     </div>
                 </div>
                 
@@ -147,23 +148,23 @@
                 <br><br>
                 
                 <div class="form-group row">
-                    <label for="inputName" class="col-sm-3 col-form-label">Nombre completo:</label>
+                    <label for="inputNombreRecipiente" class="col-sm-3 col-form-label">Nombre completo:</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputName" placeholder="Camila Ramirez Garcia" required="required">
+                      <input type="text" class="form-control" id="inputNombreRecipiente" placeholder="Camila Ramirez Garcia" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputMarca" class="col-sm-3 col-form-label">Ciudad:</label>
+                    <label for="inputCiudadRecipiente" class="col-sm-3 col-form-label">Ciudad:</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputMarca" placeholder="Bogotá" required="required">
+                      <input type="text" class="form-control" id="inputCiudadRecipiente" placeholder="Bogotá" required="required">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="inputPrice" class="col-sm-3 col-form-label">Dirección a recoger el paquete:</label>
+                    <label for="inputDireccionRecipiente" class="col-sm-3 col-form-label">Dirección a recoger el paquete:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="inputMarca" placeholder="" required="required">
+                        <input type="text" class="form-control" id="inputDireccionRecipiente" placeholder="" required="required">
                     </div>
                 </div>
                 
@@ -218,110 +219,128 @@
                 </div>
                 <div class="modal-body">
                     
-                        <p class="section-subheading text-muted">Datos personales:</p><br>
-                        <div class="form-group row">
-                            <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputName1" placeholder="Camila Garcia" required="required">
-                            </div>
+
+                    <br>
+                    <p class="section-subheading text-body col-sm-5">
+                        <strong>Datos personales:</strong>
+                    </p>
+                    <br>
+                    
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-3 col-form-label">Nombre completo:</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="inputNombre1" placeholder="Camila Ramirez Garcia" required="required">
                         </div>
-        
-                        <div class="form-group row">
-                          <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                          <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail1" placeholder="example@gmail.com" required="required">
-                          </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="dimension" class="col-sm-3 col-form-label">Dimensiones del paquete:</label>
+                            <label for="inputEmail" class="col-sm-2 col-form-label">Ancho:</label>
+                            <div class="col-2">
+                                <input id="inputDimensionAncho1" type="text" class="form-control" placeholder="50cm">
+                            </div>
+                            <label for="inputEmail" class="col-sm-2 col-form-label">Largo:</label>
+                            <div class="col-2">
+                                <input id="inputDimensionLargo1" type="text" class="form-control" placeholder="50cm">
+                            </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="peso" class="col-sm-3 col-form-label">Peso aproximado:</label>
+                        <div class="col-sm-8">
+                          <input type="tel" class="form-control" id="inputPeso1" placeholder="5kg" required="required">
                         </div>
-        
-                        <div class="form-group row">
-                            <label for="inputTel" class="col-sm-2 col-form-label">Teléfono</label>
-                            <div class="col-sm-10">
-                              <input type="tel" class="form-control" id="inputTel1" placeholder="3023957438" required="required">
+                    </div>
+    
+                    <div class="form-group row">
+                        <label id="delicado" for="inputEmail" class="col-sm-3 col-form-label">Delicado:</label>
+                            <label for="inputEmail" class="col-sm-1 col-form-label">Si:</label>
+                            <div class="col-3 form-check">
+                                <input class="form-check-input position-static" type="radio" name="delicado1" id="inlineRadio11" value="Si" aria-label="...">
                             </div>
+                            <label for="inputEmail" class="col-sm-1 col-form-label">No:</label>
+                            <div class="col-3 form-check">
+                                <input class="form-check-input position-static" type="radio" name="delicado1" id="inlineRadio22" value="No" aria-label="...">
+                            </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputCiudad" class="col-sm-3 col-form-label">Ciudad:</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="inputCiudad1" placeholder="Bogotá" required="required">
                         </div>
-        
-                        <div class="form-group row">
-                          <label for="inputCountry" class="col-sm-2 col-form-label">País</label>
-                          <div class="col-sm-10">
-                            <select class="form-control" required="required" id="inputCountry1">
-                                <option selected class="form-option-selected">Pais...</option>
-                                <option>Argentina</option>
-                                <option>Colombia</option>
-                                <option>Chile</option>
-                                <option>Brasil</option>
-                                <option>Mexico</option>
-                            </select>
-                          </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputDireccionRecogida" class="col-sm-3 col-form-label">Dirección a recoger el paquete:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputDireccionRecogida1" placeholder="" required="required">
                         </div>
-        
-                        <div class="form-group row">
-                            <label for="inputPlaca" class="col-sm-2 col-form-label">Placa</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputPlaca1" placeholder="WJS234" required="required">
-                            </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputIdentificacion" class="col-sm-3 col-form-label">Numero de indentificación:</label>
+                        <div class="col-sm-8">
+                          <input type="number" class="form-control" id="inputIdentificacion1" placeholder="" required="required">
                         </div>
-        
-                        <div class="form-group row">
-                            <label for="inputMarca" class="col-sm-2 col-form-label">Marca</label>
-                            <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputMarca1" placeholder="Hyundai" required="required">
-                            </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputHorarioDisponibilidad" class="col-sm-3 col-form-label">Ingresa tu horario de disponibilidad:</label>
+                        <div class="col-sm-8">
+                          <input type="date" class="form-control" id="inputHorarioDisponibilidad1" placeholder="" required="required">
                         </div>
-        
-                        <div class="form-group row">
-                            <label for="inputPrice" class="col-sm-2 col-form-label">Precio</label>
-                            <div class="col-sm-10">
-                              <input type="number" class="form-control" id="inputPrice1" placeholder="1000000" required="required">
-                            </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputPrice" class="col-sm-3 col-form-label"></label>
+                        <label for="inputEmail" class="col-sm-1 col-form-label">Desde:</label>
+                        <div class="col-3 form-check">
+                            <input  type="time" class="form-control" id="inputHorarioDisponibilidadHora11" placeholder="" required="required">                        
                         </div>
-        
-                        
-        
-                        <br><br>
-                            <p class="section-subheading text-muted">Tipo de vehículo:</p><br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="carType1" id="inlineRadio1" value="Ligero">
-                                <label class="form-check-label" for="inlineRadio1">Ligero</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="carType1" id="inlineRadio2" value="Pesado">
-                                <label class="form-check-label" for="inlineRadio2">Pesado</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="carType1" id="inlineRadio3" value="Especial">
-                                <label class="form-check-label" for="inlineRadio2">Especial</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="carType1" id="inlineRadio4" value="Agrícola">
-                                <label class="form-check-label" for="inlineRadio2">Agrícola</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="carType1" id="inlineRadio5" value="Otro">
-                                <div class="form-group row">
-                                    <label for="inputOther" class="col-sm-2 col-form-label">Otro</label>
-                                    <div class="col-sm-10">
-                                      <input type="text" class="form-control" id="inputOther1">
-                                    </div>
-                                </div>
-                            </div>
-        
-        
-                        <br><br>
-                            <p class="section-subheading text-muted">Características:</p><br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="characteristics1" id="inlineRadio11" value="Nuevo">
-                                <label class="form-check-label" for="inlineRadio1">Nuevo</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="characteristics1" id="inlineRadio22" value="Usado">
-                                <label class="form-check-label" for="inlineRadio2">Usado</label>
-                            </div>
+                        <label for="inputEmail" class="col-sm-1 col-form-label">Hasta:</label>
+                        <div class="col-3 form-check">
+                            <input type="time" class="form-control" id="inputHorarioDisponibilidadHora22" placeholder="" required="required">                       
+                        </div>
+                    </div>
+                    
+    
+                    <br><br><br>
+    
+                    <br>
+                    <p class="section-subheading text-body col-sm-7">
+                        <strong>Datos de la persona a recibir:</strong>
+                    </p>
+                    <br><br>
+                    
+                    <div class="form-group row">
+                        <label for="inputNombreRecipiente" class="col-sm-3 col-form-label">Nombre completo:</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="inputNombreRecipiente1" placeholder="Camila Ramirez Garcia" required="required">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputCiudadRecipiente" class="col-sm-3 col-form-label">Ciudad:</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="inputCiudadRecipiente1" placeholder="Bogotá" required="required">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label for="inputDireccionRecipiente" class="col-sm-3 col-form-label">Dirección a recoger el paquete:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputDireccionRecipiente1" placeholder="" required="required">
+                        </div>
+                    </div>
+                    
 
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>          
                 <button id="buttonEditCar" type="submit" class="btn btn-primary" onclick="editMethod()">Actualizar</button>              
                 </div>
+
             </div>
             </div>
         
@@ -346,7 +365,7 @@
                 <div class="col-lg-4">
                     <div class="team-member">
                         <h4>Jacqueline Parada Parada</h4>
-                        <a class="btn btn-primary btn-social mx-2" href="https://github.com/Laura77-code/GestionDeVehiculos" aria-label="Laura Morales Instagram Profile"><i
+                        <a class="btn btn-primary btn-social mx-2" href="https://github.com/JackyParada/instaYa" aria-label="Laura Morales Instagram Profile"><i
                             class="fab  fa-github"></i></a>
                     </div>
                 </div>
@@ -374,12 +393,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <script src="js/deleteVehiculos.js"></script>
-    <script src="js/formularioCreacionVehiculo.js"></script>
+    
+    <script type="module" src="./js/logout.js"></script>
+    <script src="js/formularioCreacionPaquete.js"></script>
+    <script src="js/scripts.js"></script>    
+    <script src="js/deletePaquetes.js"></script>
+    <script src="js/formularioEditarPaquete.js"></script>
     <script src="js/listadoEnvios.js"></script>
-    <script src="js/formularioEditarVehiculo.js"></script>
-    <script src="js/cardsBusqueda.js"></script>
+
+    <!-- 
+    <script src="js/cardsBusqueda.js"></script> -->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

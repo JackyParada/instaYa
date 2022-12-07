@@ -11,7 +11,7 @@ function deleteVehiculo(id_vehiculo){
         // No need to have body, because we don't send nothing to the server.
     }
        // Make the HTTP Delete call using fetch api
-    var id = 'https://633e4bc00dbc3309f3b374d2.mockapi.io/api/v1/vehiculos/'+ id_vehiculo;
+    var id = 'https://6388214aa4bb27a7f77e669a.mockapi.io/users/'+ id_vehiculo;
     fetch(id, deleteMethod) 
     .then(response => response.json())
     .then(data => console.log(data)) // Manipulate the data retrieved back, if we want to do something with it
