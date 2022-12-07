@@ -128,7 +128,7 @@ signinForm.addEventListener('submit', (e) => {
 //page Change
 
 function indexPage() {
-    location.replace("http://127.0.0.1:5500/index.html")
+    location.replace("https://jackyparada.github.io/instaYa/index.html")
 }
 
 auth.onAuthStateChanged(user => {
